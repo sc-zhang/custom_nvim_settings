@@ -1,19 +1,3 @@
--- Close mouse support
-vim.opt.mouse = ""
-
--- Set row number as relative
-vim.opt.relativenumber = true
-
--- Restore lastest edit position
-vim.api.nvim_create_autocmd("BufReadPost", {
-  callback = function()
-    local mark = vim.api.nvim_buf_get_mark(0, '"')
-    if mark[1] > 1 and mark[1] <= vim.api.nvim_buf_line_count(0) then
-      vim.api.nvim_win_set_cursor(0, { mark[1], mark[2] })
-    end
-  end,
-})
-
 -- Duplicate current line downward and move cursor to the duplicated line (same column)
 local function duplicate_line_down_and_move()
   local win, buf = 0, 0
@@ -67,4 +51,3 @@ vim.keymap.set("x", "<leader>d", duplicate_visual_lines_down, { desc = "Duplicat
 
 -- Avoid cursor move to left character after ESC pressed
 vim.keymap.set("i", "<ESC>", "<ESC>`^", {noremap=true})
-

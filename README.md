@@ -16,7 +16,7 @@ require "personal"
     1. locate to last edit position when open file
 - keymaps
     1. bind <leader>d to duplicate current line and move cursor to the same column of duplicated line
-    2. avoid cursor move to left character after exist INSERT mode to NORMAL mode
+    2. avoid cursor move to left character after exit INSERT mode to NORMAL mode
 - options
     1. turn on relative line numbers
 

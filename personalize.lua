@@ -1,3 +1,6 @@
+-- Close mouse support
+vim.opt.mouse = ""
+
 -- Set row number as relative
 vim.opt.relativenumber = true
 
